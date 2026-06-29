@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ProgressionTable" format=3 uid="uid://ctmfd1c8cf1qb"]
+
+[ext_resource type="Script" uid="uid://b8yhtwwqu3tn4" path="res://ClassPromotion.gd" id="1_36x63"]
+[ext_resource type="Script" uid="uid://sevpwo8nv86i" path="res://ProgressionTable.gd" id="1_x3q7a"]
+[ext_resource type="Script" uid="uid://dyct46ewlwhia" path="res://Promotion.gd" id="2_uyrpm"]
+[ext_resource type="Resource" uid="uid://cwp6qbfixdsbb" path="res://Resources/Promotions/archer_to_ranger.tres" id="3_36x63"]
+[ext_resource type="Resource" uid="uid://8u36ppsi8j3e" path="res://Resources/Promotions/archer_to_hunter.tres" id="4_uyrpm"]
+
+[sub_resource type="Resource" id="Resource_hx8n4"]
+script = ExtResource("1_36x63")
+base_class = "Archer"
+promotions = Array[ExtResource("2_uyrpm")]([ExtResource("3_36x63"), ExtResource("4_uyrpm")])
+metadata/_custom_type_script = "uid://b8yhtwwqu3tn4"
+
+[resource]
+script = ExtResource("1_x3q7a")
+classes = Array[ExtResource("1_36x63")]([SubResource("Resource_hx8n4")])
+metadata/_custom_type_script = "uid://sevpwo8nv86i"

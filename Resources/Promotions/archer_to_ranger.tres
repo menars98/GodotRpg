@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="Promotion" format=3 uid="uid://cwp6qbfixdsbb"]
+
+[ext_resource type="Texture2D" uid="uid://cyiy7jj83brws" path="res://Fantasy Battle Pack/Sprite Sheets/Archer/Archer_Green1.png" id="1_qq2uc"]
+[ext_resource type="Script" uid="uid://dyct46ewlwhia" path="res://Promotion.gd" id="2_jgedf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcdf8"]
+atlas = ExtResource("1_qq2uc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlkle"]
+atlas = ExtResource("1_qq2uc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62tks"]
+atlas = ExtResource("1_qq2uc")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxfl4"]
+atlas = ExtResource("1_qq2uc")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m3k05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcdf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlkle")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62tks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxfl4")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_jgedf")
+new_class_name = "Ranger"
+bonus_max_hp = 10
+bonus_attack = 8
+bonus_defense = 2
+bonus_speed = 2
+new_hp_growth = 7
+new_attack_growth = 3
+new_defense_growth = 5
+new_sprite_frames = SubResource("SpriteFrames_m3k05")
+metadata/_custom_type_script = "uid://dyct46ewlwhia"

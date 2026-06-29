@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DamageMatrix" format=3 uid="uid://bglkjitve7xd0"]
+
+[ext_resource type="Script" uid="uid://cy1xkpga8cbs8" path="res://DamageRule.gd" id="1_b33pv"]
+[ext_resource type="Script" uid="uid://d01uhep0php0e" path="res://DamageMatrix.gd" id="2_gowpo"]
+
+[sub_resource type="Resource" id="Resource_cojbx"]
+script = ExtResource("1_b33pv")
+damage_type = 1
+armor_type = 3
+multiplier = 1.6
+metadata/_custom_type_script = "uid://cy1xkpga8cbs8"
+
+[resource]
+script = ExtResource("2_gowpo")
+rules = Array[ExtResource("1_b33pv")]([SubResource("Resource_cojbx")])
+metadata/_custom_type_script = "uid://d01uhep0php0e"

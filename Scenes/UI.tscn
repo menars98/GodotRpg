@@ -1,0 +1,213 @@
+[gd_scene format=3 uid="uid://bw6yu8ssipan1"]
+
+[sub_resource type="SystemFont" id="SystemFont_nxvpl"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_w371h"]
+font = SubResource("SystemFont_nxvpl")
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3iaii"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3iaii"]
+bg_color = Color(0, 0.3529412, 0.80784315, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ek5ad"]
+bg_color = Color(0, 0.3529412, 0.80784315, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=661337341]
+process_mode = 3
+
+[node name="EndTurnButton" type="Button" parent="." unique_id=401450985]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_top = 130.0
+offset_right = -60.0
+grow_horizontal = 0
+text = "End Turn"
+
+[node name="ActionMenu" type="VBoxContainer" parent="." unique_id=2134889103]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -29.0
+offset_top = -66.0
+offset_right = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="AttackButton" type="Button" parent="ActionMenu" unique_id=1630384895]
+layout_mode = 2
+text = "Attack"
+
+[node name="WaitButton" type="Button" parent="ActionMenu" unique_id=1501334936]
+layout_mode = 2
+text = "Wait"
+
+[node name="VictoryLabel" type="Label" parent="." unique_id=185416406]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -11.5
+offset_right = 29.500061
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Victory!"
+label_settings = SubResource("LabelSettings_w371h")
+vertical_alignment = 1
+
+[node name="DefeatLabel" type="Label" parent="." unique_id=827920603]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -11.5
+offset_right = 29.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Defeat!"
+label_settings = SubResource("LabelSettings_w371h")
+vertical_alignment = 1
+
+[node name="TopBar" type="ColorRect" parent="." unique_id=1715476427]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 24.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 0.4509804)
+
+[node name="RoundLabel" type="Label" parent="TopBar" unique_id=761718184]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+label_settings = SubResource("LabelSettings_3iaii")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TurnLabel" type="Label" parent="TopBar" unique_id=1075762574]
+layout_mode = 0
+offset_right = 58.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+
+[node name="InfoPanel" type="Panel" parent="." unique_id=643889295]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 200.0
+grow_vertical = 0
+
+[node name="NameLabel" type="Label" parent="InfoPanel" unique_id=258149518]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="HPLabel" type="Label" parent="InfoPanel" unique_id=1280188891]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+
+[node name="StatsLabel" type="Label" parent="InfoPanel" unique_id=86020693]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="ContinueButton" type="Button" parent="." unique_id=1860070892]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = 28.670013
+offset_right = 39.5
+offset_bottom = 59.670013
+grow_horizontal = 2
+grow_vertical = 2
+text = "Continue"
+
+[node name="StartBattleButton" type="Button" parent="." unique_id=1711353256]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -15.5
+offset_right = 48.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Battle"
+
+[node name="PromotionPanel" type="PanelContainer" parent="." unique_id=1185711432]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 19.999634
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3iaii")
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="PromotionPanel" unique_id=2138862848]
+layout_mode = 2
+
+[node name="LevelUpPanel" type="PanelContainer" parent="." unique_id=184468986]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.5
+offset_top = -29.0
+offset_right = 15.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ek5ad")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelUpPanel" unique_id=1471290352]
+layout_mode = 2
+
+[node name="StatText" type="Label" parent="LevelUpPanel/VBoxContainer" unique_id=670920235]
+layout_mode = 2
+
+[node name="OkButton" type="Button" parent="LevelUpPanel/VBoxContainer" unique_id=694705627]
+layout_mode = 2
+text = "OK
+"

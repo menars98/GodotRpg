@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="Promotion" format=3 uid="uid://8u36ppsi8j3e"]
+
+[ext_resource type="Texture2D" uid="uid://c1fp53mtul4ep" path="res://Fantasy Battle Pack/Sprite Sheets/MountedArcher/MountedArcher_Red1.png" id="1_53lig"]
+[ext_resource type="Script" uid="uid://dyct46ewlwhia" path="res://Promotion.gd" id="2_hqxj6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqxj6"]
+atlas = ExtResource("1_53lig")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck0m4"]
+atlas = ExtResource("1_53lig")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w258r"]
+atlas = ExtResource("1_53lig")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfsfc"]
+atlas = ExtResource("1_53lig")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m3k05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqxj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck0m4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w258r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfsfc")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_hqxj6")
+new_class_name = "Hunter"
+bonus_max_hp = 5
+bonus_attack = 12
+bonus_defense = 2
+bonus_speed = 2
+new_hp_growth = 5
+new_attack_growth = 6
+new_defense_growth = 3
+new_speed_growth = 2
+new_sprite_frames = SubResource("SpriteFrames_m3k05")
+metadata/_custom_type_script = "uid://dyct46ewlwhia"

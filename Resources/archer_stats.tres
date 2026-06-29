@@ -1,0 +1,85 @@
+[gd_resource type="Resource" script_class="UnitStats" format=3 uid="uid://e0bcvlo2ycn2"]
+
+[ext_resource type="Script" uid="uid://dxenb44yne53p" path="res://UnitStats.gd" id="2_ltf4q"]
+[ext_resource type="Texture2D" uid="uid://yfs4xypba7n3" path="res://Fantasy Battle Pack/Sprite Sheets/Archer/Archer_Blue1.png" id="3_ltf4q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unkew"]
+atlas = ExtResource("3_ltf4q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lcew"]
+atlas = ExtResource("3_ltf4q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0hg8"]
+atlas = ExtResource("3_ltf4q")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbu6d"]
+atlas = ExtResource("3_ltf4q")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltf4q"]
+atlas = ExtResource("3_ltf4q")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eppvm"]
+atlas = ExtResource("3_ltf4q")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y33f8"]
+atlas = ExtResource("3_ltf4q")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmcvc"]
+atlas = ExtResource("3_ltf4q")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xqv2m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unkew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lcew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0hg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbu6d")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltf4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eppvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y33f8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmcvc")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_ltf4q")
+unit_name = "Archer"
+max_hp = 50
+hp = 50
+attack = 25
+defense = 5
+move_range = 5
+sprite_frames = SubResource("SpriteFrames_xqv2m")
+damage_type = 1
+metadata/_custom_type_script = "uid://dxenb44yne53p"

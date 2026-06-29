@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="UnitStats" format=3 uid="uid://citkeh7dsixwy"]
+
+[ext_resource type="Script" uid="uid://dxenb44yne53p" path="res://UnitStats.gd" id="2_uj310"]
+[ext_resource type="Texture2D" uid="uid://bh0ijmd4hmd0a" path="res://Fantasy Battle Pack/Sprite Sheets/SpearFighter/SpearFighter_LongHair_Blue1.png" id="3_uj310"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqv2m"]
+atlas = ExtResource("3_uj310")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oov0"]
+atlas = ExtResource("3_uj310")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au4ae"]
+atlas = ExtResource("3_uj310")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltfh3"]
+atlas = ExtResource("3_uj310")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0s71"]
+atlas = ExtResource("3_uj310")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22uay"]
+atlas = ExtResource("3_uj310")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bauom"]
+atlas = ExtResource("3_uj310")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm5s6"]
+atlas = ExtResource("3_uj310")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ts8f3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqv2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0oov0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au4ae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltfh3")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0s71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22uay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bauom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vm5s6")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_uj310")
+sprite_frames = SubResource("SpriteFrames_ts8f3")
+armor_type = 1
+metadata/_custom_type_script = "uid://dxenb44yne53p"
